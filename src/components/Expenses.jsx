@@ -25,7 +25,9 @@ const Expenses = ({ events }) => {
                 <td className='table-type'>{event.eventTypeName}</td>
                 <td className='table-quantity'>{event.quantity}</td>
                 <td className='table-total'>
-                  {Math.round(event.price * event.quantity * 100) / 100}
+                  {(
+                    Math.round(event.price * event.quantity * 100) / 100
+                  ).toFixed(2)}
                 </td>
               </tr>
             );

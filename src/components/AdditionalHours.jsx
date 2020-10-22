@@ -23,7 +23,9 @@ const AdditionalHours = ({ events }) => {
               <tr key={event.eventTypeName}>
                 <td className='table-type'>{event.eventTypeName}</td>
                 <td className='table-amount'>
-                  {Math.round(event.quantity * event.tasksCount * 100) / 100}
+                  {(
+                    Math.round(event.quantity * event.tasksCount * 100) / 100
+                  ).toFixed(2)}
                 </td>
               </tr>
             );
